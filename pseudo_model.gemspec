@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["stefan.huska@gmail.com"]
   gem.description   = %q{Use ActiveRecord Validations in any class}
   gem.summary       = %q{Model-like validations in any class}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/kelso/pseudo_model"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
