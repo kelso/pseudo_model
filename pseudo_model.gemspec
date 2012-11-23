@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = PseudoModel::VERSION
   gem.authors       = ["Stefan Huska"]
   gem.email         = ["stefan.huska@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Use ActiveRecord Validations in any class}
+  gem.summary       = %q{Model-like validations in any class}
+  gem.homepage      = "https://github.com/kelso/pseudo_model"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
