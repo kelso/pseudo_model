@@ -1,6 +1,6 @@
 # PseudoModel
 
-TODO: Write a gem description
+ActiveRecord Validations without ActiveRecord? No problem.
 
 ## Installation
 
@@ -18,7 +18,44 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+If you want to build form with validations, but you don't need store data to database, this is for you.
+
+For instance, you want calculation request form.
+
+Create app/model/calculation_request.rb and define class from PseudoModel::Base
+
+    CalculationRequest < PseudoModel::Base
+      attr_acessor :name, :message
+      validates :message, :presence => true
+    end
+
+Now you can use `valid?` method:
+
+    calc_request = CalculationRequest.new
+    calc_request.valid? #=> false
+    calc_request.message = "Hello, I want to know how much..."
+    calc_request.valid? #=> true
+
+In controller you can simply do:
+
+    def new
+      @calculation_request = CalculcationRequest.new
+    end
+
+    def create
+      @calculation_request = CalculcationRequest.new(params[:calculation_request])
+      if @calculation_request.valid?
+        # send email or something
+      else
+        render :new
+      end
+    end
+
+Building a form is simple as that:
+
+    <%= form_for @calculation_request do |f| %>
+      ...
+    <% end %>
 
 ## Contributing
 

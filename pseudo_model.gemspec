@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = PseudoModel::VERSION
   gem.authors       = ["Stefan Huska"]
   gem.email         = ["stefan.huska@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Use ActiveRecord Validations in any class}
+  gem.summary       = %q{Model-like validations in any class}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
