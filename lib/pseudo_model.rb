@@ -1,4 +1,5 @@
-require "pseudo_model/version"
+require 'pseudo_model/version'
+require 'active_model'
 
 module PseudoModel
   class Base
