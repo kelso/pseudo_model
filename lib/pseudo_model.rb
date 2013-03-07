@@ -3,6 +3,7 @@ require "pseudo_model/version"
 module PseudoModel
   class Base
     include ActiveModel::Validations
+    include ActiveModel::Validations::Callbacks
     include ActiveModel::Conversion
 
     def initialize(attributes = {})
