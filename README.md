@@ -24,8 +24,8 @@ For instance, you want calculation request form.
 
 Create app/model/calculation_request.rb and define class from PseudoModel::Base
 
-    CalculationRequest < PseudoModel::Base
-      attr_acessor :name, :message
+    class CalculationRequest < PseudoModel::Base
+      attr_accessor :name, :message
       validates :message, :presence => true
     end
 
